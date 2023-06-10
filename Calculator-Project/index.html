@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="scripts.js" defer></script> -->
+    <title>Calculator Project</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display" data-display>
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" data-clear onclick="display.value = ''" class="operator">
+                    <input type="button" value="DE" data-remove onclick="display.value = display.value.toString().slice(0, -1)" class="operator">
+                    <input type="button" value="." data-comma onclick="display.value += '.'" class="operator">
+                    <input type="button" value="/" data-division onclick="display.value += '/'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" data-seven onclick="display.value += '7'">
+                    <input type="button" value="8" data-eight onclick="display.value += '8'">
+                    <input type="button" value="9" data-nine onclick="display.value += '9'">
+                    <input type="button" value="*" data-multiply onclick="display.value += '*'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" data-four onclick="display.value += '4'">
+                    <input type="button" value="5" data-five onclick="display.value += '5'">
+                    <input type="button" value="6" data-six onclick="display.value += '6'">
+                    <input type="button" value="-" data-minus onclick="display.value += '-'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" data-one onclick="display.value += '1'">
+                    <input type="button" value="2" data-two onclick="display.value += '2'">
+                    <input type="button" value="3" data-three onclick="display.value += '3'">
+                    <input type="button" value="+" data-addition onclick="display.value += '+'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00" data-double-zero onclick="display.value += '00'">
+                    <input type="button" value="0" data-zero onclick="display.value += '0'">
+                    <input type="button" value="=" class="equal operator" data-equal onclick="display.value = eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
