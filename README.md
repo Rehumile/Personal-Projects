@@ -1,2 +1,3 @@
 # Personal-Projects
-Extra projects for practice
+
+This repository will store practice projects or project I have been working on.
